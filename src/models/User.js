@@ -23,7 +23,9 @@ const userSchema = new mongoose.Schema({
         enum : ["patient" , "doctor" , "staff" , "admin"],
         default : "patient"
     },
-    refreshToken : {type : String}
+    refreshToken : { type : String },
+    passwordResetToken : { type : String },
+    passwordResetExpires : { type : Date }
 },{timestamps: true});
 
 userSchema.pre("save" , async function(next){

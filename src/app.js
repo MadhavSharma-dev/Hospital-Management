@@ -16,6 +16,8 @@ app.use(express.static("public"));
 app.use(cookieParser());
 
 // ─── Routes ──────────────────────────────────────────────────
+const authRoutes = require("./routes/authRoutes");
+app.use("/api/auth", authRoutes);
 // TODO: import and mount routes here
 // app.use("/api/patients", patientRoutes);
 // app.use("/api/doctors", doctorRoutes);
