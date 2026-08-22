@@ -17,13 +17,15 @@ app.use(cookieParser());
 
 // ─── Routes ──────────────────────────────────────────────────
 const authRoutes = require("./routes/authRoutes");
+const appointmentRoutes = require("./routes/appoinmentRoutes");
+
 app.use("/api/auth", authRoutes);
+app.use("/api/appointments", appointmentRoutes);
 // TODO: import and mount routes here
 // app.use("/api/patients", patientRoutes);
 // app.use("/api/doctors", doctorRoutes);
 // app.use("/api/staff", staffRoutes);
 // app.use("/api/departments", departmentRoutes);
-// app.use("/api/appointments", appointmentRoutes);
 
 // ─── 404 Handler ─────────────────────────────────────────────
 app.use((req, res) => {
